@@ -28,7 +28,7 @@ Sample Output 1:
 
 import java.util.Scanner;
 
-class Main {
+class Challenge3_35 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
@@ -37,7 +37,7 @@ class Main {
         for (int i = 0; i < elements; i++) {
             int element = scan.nextInt();
             
-            if (element % 4 ==0 && element > maxDivisibleByFour) {
+            if (element % 4 == 0 && element > maxDivisibleByFour) {
                 maxDivisibleByFour = element;
             }
         }
