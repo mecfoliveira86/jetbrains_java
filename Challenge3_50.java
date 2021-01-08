@@ -23,3 +23,41 @@ Sample Output 3:
 false
 */
 
+import java.util.Scanner;
+
+class Challenge3_50 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        int numLast = 0;
+        int numCurrent = 0;
+        int counter = 0;
+        boolean ordered = true;
+        boolean result = true;
+        
+        while (scan.hasNext()) {
+            int num = scan.nextInt();
+            
+            if (num == 0) {
+                break;
+            } else {
+                counter++;
+                numLast = numCurrent;
+                numCurrent = num;
+                
+                if (counter == 1) {
+                    numLast = num;
+                } else if (counter == 2) {
+                    ordered = numLast <= numCurrent;
+                } else if (counter >= 3) {
+                    if (ordered == numLast <= numCurrent) {
+                        continue;
+                    } else {
+                        result = false;
+                    }    
+                }  
+            }
+        }
+        System.out.println(result);
+    }
+}
