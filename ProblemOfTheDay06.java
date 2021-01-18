@@ -41,3 +41,38 @@ Sample Output 4:
 41 51 78 90 11 21 1
 */
 
+import java.util.Scanner;
+
+class ProblemOfTheDay06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String[] entrance = sc.nextLine().split(" ");
+        int rotation = sc.nextInt();
+        int rotations = rotation % entrance.length;
+        
+        //int[] result = new int[entrance.length];
+        //for (int i = 0; i < entrance.length; i++) {
+        //    result[i] = Integer.parseInt(entrance[i]);
+        //}
+
+        String last;
+        int j;
+        
+        for (int i = 0; i < rotations; i++) {    
+                    
+            last = entrance[entrance.length - 1];    
+            
+            for (j = entrance.length - 1; j > 0; j--) {    
+                entrance[j] = entrance[j - 1];    
+            }    
+            entrance[0] = last;    
+        }
+        
+        //System.out.println(result);
+        
+        for (String resp:entrance) {
+            System.out.print(resp + " ");
+        }
+    }
+}
