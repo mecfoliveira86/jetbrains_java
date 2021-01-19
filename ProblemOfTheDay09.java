@@ -19,6 +19,7 @@ otherwise, output "Incompatible".
 Hint
 
 One box can be placed inside the other only if it is strictly smaller by all three dimensions. It does not necessarily mean that boxes cannot have one equal side, as you can rotate them.
+
 */
 
 import java.util.*;
