@@ -23,7 +23,7 @@ One box can be placed inside the other only if it is strictly smaller by all thr
 
 import java.util.*;
 
-public class ProblemOfTheDay09 {
+public class Challenge4_13 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
