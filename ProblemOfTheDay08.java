@@ -32,13 +32,27 @@ class ProblemOfTheDay08 {
         boolean result = false;
         
         for (int i = 0; i < data.length - 1; i++) {
-             if (data[i].compareTo(data[i + 1]) == -1) {
-                 result = true;
-             } else {
-                 result = false;
-                 break;
-             }   
+            
+            int numA = data[i].length();
+            int numB = data[i + 1].length();
+            
+            if (numA <= numB) {
+                if (data[i].substring(0,numA).compareTo(data[i + 1].substring(0, numA)) <= -1 || data[i].substring(0,numA).compareTo(data[i + 1].substring(0, numA)) == 0) {
+                    result = true;
+                } else {
+                    result = false;        
+                    break;
+                }
+            } else {
+                if (data[i].substring(0,numB).compareTo(data[i + 1].substring(0, numB)) <= -1 || data[i].substring(0,numB).compareTo(data[i + 1].substring(0, numB)) == 0) {
+                    result = false;
+                    break;
+                } else {
+                    result = true;
+                } 
+            }
         }
         System.out.println(result);
     }
 }
+        
