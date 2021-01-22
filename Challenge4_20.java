@@ -42,5 +42,13 @@ public class Main {
                 element++;
             }
         }
+
+        for (int i = 0; i < length * length; i++) {
+            for (int j = 0; j < length * length; j++) {
+                grade[i][j] = Integer.parseInt(data[element]);
+                element++;
+            }
+        }
+
     }
 }
