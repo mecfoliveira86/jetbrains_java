@@ -159,6 +159,8 @@ public class Cinema {
             }
         }
 
+//Testing a new resolution:
+
 
     }
 }
