@@ -2,7 +2,7 @@ package cinema;
 
 import java.util.Scanner;
 
-public class Cinema {
+public class Challenge5_07 {
     public static String[][] start(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows:");
