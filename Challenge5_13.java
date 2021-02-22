@@ -18,6 +18,5 @@ class Challenge5_13 {
         } else {
             System.out.println(string.toLowerCase());
         }
-
     }
 }
